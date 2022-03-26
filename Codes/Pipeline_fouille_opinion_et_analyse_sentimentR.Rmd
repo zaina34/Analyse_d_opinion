@@ -15,9 +15,6 @@ rm(list=ls())
 #charger les packages de l'univers Tidy
 #en particulier dplyr
 library(tidyverse)
-library(tm)
-library(plyr)
-library(sentimentr)
 
 #charger les données
 #avec le package readxl
@@ -25,50 +22,11 @@ df <- read.csv("C:\\Users\\ganci\\Documents\\master_miashs sans TER\\Analyse de 
 str(df)
 ```
 
-```{r}
-corpus <- get_sentences(df$post) 
-```
-
-
-
-```{r}
-# sentencespos <- get_sentences(df$post) %>% data.frame()
-```
-
-
-
-## sentiment par phrase 
-```{r}
-sentiment(corpus)
-```
-
-
-
-
-```{r}
-sentiment_post <- sentiment_by(corpus)
-```
-
-
 
 ```{r}
 #premiers documents de la base de données
 head(df)
 ```
-
-
-
-```{r}
-news_df = c('les gens pensent aux chiens','je deteste les fleurs', 
-         'il est gentils et intelligents')
-
-news_dfs  <- get_sentences(news_df) %>% as.data.frame()
-
-# sentiment(news_dfs)
-
-```
-
-
 
 
 ```{r}
