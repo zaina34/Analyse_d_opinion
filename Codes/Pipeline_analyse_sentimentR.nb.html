@@ -221,7 +221,7 @@ pre code {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI3ZpZGVyIGxhIG3DqW1vaXJlXG5ybShsaXN0PWxzKCkpXG5cbiNjaGFuZ2VyIGRlIGRvc3NpZXIgY291cmFudFxuIyBzZXR3ZChcIkM6L1VzZXJzL3JpY2NvL0Rlc2t0b3AvZGVtb1wiKVxuXG4jY2hhcmdlciBsZXMgcGFja2FnZXMgZGUgbCd1bml2ZXJzIFRpZHlcbiNlbiBwYXJ0aWN1bGllciBkcGx5clxubGlicmFyeSh0aWR5dmVyc2UpXG5cbiNjaGFyZ2VyIGxlcyBkb25uw6llc1xuI2F2ZWMgbGUgcGFja2FnZSByZWFkeGxcbmRmIDwtIHJlYWQuY3N2KFwiQzpcXFxcVXNlcnNcXFxcZ2FuY2lcXFxcRG9jdW1lbnRzXFxcXG1hc3Rlcl9taWFzaHMgc2FucyBURVJcXFxcQW5hbHlzZSBkZSBkb25uw6llcyB0ZXh0dWVsbGVzXFxcXFByb2pldFxcXFxBbmFseXNlX2Rfb3BpbmlvblxcXFxEb25uw6llc1xcXFxjb3JwdXNfYm9nZGFub2YuY3N2XCIsZW5jb2RpbmcgPSBcIlVURi04XCIpXG5zdHIoZGYpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI3ZpZGVyIGxhIG3DqW1vaXJlXG5ybShsaXN0PWxzKCkpXG5cbiNjaGFuZ2VyIGRlIGRvc3NpZXIgY291cmFudFxuIyBzZXR3ZChcIkM6L1VzZXJzL3JpY2NvL0Rlc2t0b3AvZGVtb1wiKVxuXG4jY2hhcmdlciBsZXMgcGFja2FnZXMgZGUgbCd1bml2ZXJzIFRpZHlcbiNlbiBwYXJ0aWN1bGllciBkcGx5clxubGlicmFyeSh0aWR5dmVyc2UpXG5cbiNjaGFyZ2VyIGxlcyBkb25uw6llc1xuI2F2ZWMgbGUgcGFja2FnZSByZWFkeGxcbmRmIDwtIHJlYWQuY3N2KFwiQzpcXFxcVXNlcnNcXFxcZ2FuY2lcXFxcRG9jdW1lbnRzXFxcXG1hc3Rlcl9taWFzaHMgc2FucyBURVJcXFxcQW5hbHlzZSBkZSBkb25uw6llcyB0ZXh0dWVsbGVzXFxcXFByb2pldFxcXFxBbmFseXNlX2Rfb3BpbmlvblxcXFxEb25uw6llc1xcXFxjb3JwdXNfYm9nZGFub2ZyLmNzdlwiLGVuY29kaW5nID0gXCJVVEYtOFwiKVxuXG5gYGAifQ== -->
 <pre class="r"><code>#vider la mémoire
 rm(list=ls())
 
@@ -234,8 +234,8 @@ library(tidyverse)
 
 #charger les données
 #avec le package readxl
-df &lt;- read.csv(&quot;C:\\Users\\ganci\\Documents\\master_miashs sans TER\\Analyse de données textuelles\\Projet\\Analyse_d_opinion\\Données\\corpus_bogdanof.csv&quot;,encoding = &quot;UTF-8&quot;)
-str(df)</code></pre>
+df &lt;- read.csv(&quot;C:\\Users\\ganci\\Documents\\master_miashs sans TER\\Analyse de données textuelles\\Projet\\Analyse_d_opinion\\Données\\corpus_bogdanofr.csv&quot;,encoding = &quot;UTF-8&quot;)
+</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -263,10 +263,10 @@ library(tidytext)</code></pre>
 <p>La numérotation des documents permet de mieux comprendre les associations des termes avec les documents par la suite.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI21vZGlmaWVyIGxhIHN0cnVjdHVyZSBkdSB0aWJibGVcbiNlbiBudW3DqXJvdGFudCBsZXMgZG9jdW1lbnRzXG5EUFJJTSA8LSB0aWJibGUobGluZT0xOm5yb3coZGYpLHBvc3Q9ZGYkcG9zdClcbnByaW50KGhlYWQoRFBSSU0pKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI21vZGlmaWVyIGxhIHN0cnVjdHVyZSBkdSB0aWJibGVcbiNlbiBudW3DqXJvdGFudCBsZXMgZG9jdW1lbnRzXG5EUFJJTSA8LSB0aWJibGUobGluZT0xOm5yb3coZGYpLHBvc3Q9ZGYkcG9zdGZpbmFsKVxucHJpbnQoaGVhZChEUFJJTSkpXG5gYGAifQ== -->
 <pre class="r"><code>#modifier la structure du tibble
 #en numérotant les documents
-DPRIM &lt;- tibble(line=1:nrow(df),post=df$post)
+DPRIM &lt;- tibble(line=1:nrow(df),post=df$postfinal)
 print(head(DPRIM))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
@@ -277,19 +277,463 @@ print(head(DPRIM))</code></pre>
 <p>Transformation des documents en une structure “tidy”, en recensant les mots par document. L’information sur l’ordre des mots est perdue. On note en revanche que la casse a été changée, la ponctuation a été supprimée.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI3RyYWl0ZXIgbGUgdGV4dGUgYnJ1dFxucmVzX0EgPC0gRFBSSU0gJT4lXG4gIHVubmVzdF90b2tlbnMob3V0cHV0PXNlbnRlbmNlcyxpbnB1dD1wb3N0LHRva2VuID0gXCJzZW50ZW5jZXNcIilcblxuI1xucHJpbnQocmVzX0EpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI3RyYWl0ZXIgbGUgdGV4dGUgYnJ1dFxucmVzX0EgPC0gRFBSSU0gJT4lXG4gIHVubmVzdF90b2tlbnMob3V0cHV0PXdvcmQsaW5wdXQ9cG9zdClcblxuI1xuIyBwcmludChyZXNfQSlcbmBgYCJ9 -->
 <pre class="r"><code>#traiter le texte brut
 res_A &lt;- DPRIM %&gt;%
-  unnest_tokens(output=sentences,input=post,token = &quot;sentences&quot;)
+  unnest_tokens(output=word,input=post)
 
 #
-print(res_A)</code></pre>
+# print(res_A)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
+<div id="inspection-du-1er-document" class="section level4">
+<h4>Inspection du 1er document</h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI3NpIG9uIHMnZW4gdGllbnQgYXV4IG1vdHMgZHUgcHJlbWllciBkb2N1bWVudFxubW90c18xIDwtIHJlc19BICU+JVxuICBmaWx0ZXIobGluZT09MSkgJT4lXG4gIHNlbGVjdCh3b3JkKVxuXG5wcmludChtb3RzXzEkd29yZClcbmBgYCJ9 -->
+<pre class="r"><code>#si on s&#39;en tient aux mots du premier document
+mots_1 &lt;- res_A %&gt;%
+  filter(line==1) %&gt;%
+  select(word)
+
+print(mots_1$word)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2NvbXB0YWdlIGRlcyB0ZXJtZXMgcGFyIGRvY3VtZW50XG5jb21wdGVfQSA8LSByZXNfQSAlPiVcbiAgZ3JvdXBfYnkobGluZSx3b3JkKSAlPiVcbiAgc3VtbWFyaXplKGZyZXE9bigpKVxuXG5wcmludChjb21wdGVfQSlcbmBgYCJ9 -->
+<pre class="r"><code>#comptage des termes par document
+compte_A &lt;- res_A %&gt;%
+  group_by(line,word) %&gt;%
+  summarize(freq=n())
+
+print(compte_A)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="dictionnaire-global-des-termes" class="section level4">
+<h4>Dictionnaire global des termes</h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2RpY3Rpb25uYWlyZSAtIGNvbXB0YWdlXG4jb3Jkb25uYW5jZW1lbnQgc2Vsb24gbGEgZnLDqXF1ZW5jZVxuZGljb19BIDwtIHJlc19BICU+JVxuICBjb3VudCh3b3JkLHNvcnQ9VFJVRSlcblxuI2FmZmljaGFnZVxucHJpbnQoZGljb19BKVxuYGBgIn0= -->
+<pre class="r"><code>#dictionnaire - comptage
+#ordonnancement selon la fréquence
+dico_A &lt;- res_A %&gt;%
+  count(word,sort=TRUE)
+
+#affichage
+print(dico_A)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2xlcyB0ZXJtZXMgbGVzIG1vaW5zIGZyw6lxdWVudHNcbnByaW50KHRhaWwoZGljb19BKSlcbmBgYCJ9 -->
+<pre class="r"><code>#les termes les moins fréquents
+print(tail(dico_A))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+</div>
+<div id="tidytext---nettoyage-des-données" class="section level2">
+<h2>TidyText - Nettoyage des données</h2>
+<div id="stopwords-mots-vides" class="section level4">
+<h4>Stopwords (mots-vides)</h4>
+<p>Librairie pour les stopwords en francais.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI3LDqWN1cMOpcmF0aW9uIGRlcyBzdG9wd29yZHNcbmxpYnJhcnkoXCJsc2FcIilcbmRhdGEoc3RvcHdvcmRzX2ZyKVxuIyBwcmludChzdG9wd29yZHNfZnIpXG5gYGAifQ== -->
+<pre class="r"><code>#récupération des stopwords
+library(&quot;lsa&quot;)
+data(stopwords_fr)
+# print(stopwords_fr)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="tokenisation-finale-du-dataset" class="section level4">
+<h4>Tokenisation finale du dataset</h4>
+<p>Sans les chiffres, la balise “saut de ligne” et les stopwords.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2RldXhpw6htZSB2ZXJzaW9uLCBzYW5zIGxlcyBjaGlmZnJlcyBldCBsZXMgYnJcbnJlc19CIDwtIERQUklNICU+JVxuICBtdXRhdGUodGV4dD1nc3ViKHg9cG9zdCxwYXR0ZXJuPVwiWzAtOV1cIixyZXBsYWNlbWVudD1cIlwiKSkgJT4lXG4gIG11dGF0ZSh0ZXh0PWdzdWIoeD1wb3N0LHBhdHRlcm49XCLDo1wiLHJlcGxhY2VtZW50PVwiZVwiKSkgJT4lXG4gIG11dGF0ZSh0ZXh0PWdzdWIoeD1wb3N0LHBhdHRlcm49XCLDolwiLHJlcGxhY2VtZW50PVwiZVwiKSkgJT4lXG4gIHVubmVzdF90b2tlbnMob3V0cHV0PXdvcmQsaW5wdXQ9dGV4dCkgJT4lXG4gIGZpbHRlcighd29yZCAlaW4lIHN0b3B3b3Jkc19mcikgJT4lXG4gIHNlbGVjdChsaW5lLHdvcmQpXG5cbiNhZmZpY2hhZ2VcbnByaW50KHJlc19CKVxuYGBgIn0= -->
+<pre class="r"><code>#deuxième version, sans les chiffres et les br
+res_B &lt;- DPRIM %&gt;%
+  mutate(text=gsub(x=post,pattern=&quot;[0-9]&quot;,replacement=&quot;&quot;)) %&gt;%
+  mutate(text=gsub(x=post,pattern=&quot;ã&quot;,replacement=&quot;e&quot;)) %&gt;%
+  mutate(text=gsub(x=post,pattern=&quot;â&quot;,replacement=&quot;e&quot;)) %&gt;%
+  unnest_tokens(output=word,input=text) %&gt;%
+  filter(!word %in% stopwords_fr) %&gt;%
+  select(line,word)
+
+#affichage
+print(res_B)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="dictionnaire-des-termes" class="section level4">
+<h4>Dictionnaire des termes</h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2RpY3Rpb25uYWlyZVxuZGljb19CIDwtIHJlc19CICU+JVxuICBjb3VudCh3b3JkLHNvcnQ9VFJVRSlcblxucHJpbnQoZGljb19CKVxuYGBgIn0= -->
+<pre class="r"><code>#dictionnaire
+dico_B &lt;- res_B %&gt;%
+  count(word,sort=TRUE)
+
+print(dico_B)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Avec un petit “wordcloud” pour faire joli…</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI3VuIHBldGl0IHdvcmRjbG91ZCBpY2lcbmxpYnJhcnkod29yZGNsb3VkKVxud29yZGNsb3VkKHdvcmRzPWRpY29fQiR3b3JkLGZyZXE9ZGljb19CJG4sbWF4LndvcmQ9NTAsY29sb3JzID0gYnJld2VyLnBhbCg4LCdEYXJrMicpKVxuXG5gYGAifQ== -->
+<pre class="r"><code>#un petit wordcloud ici
+library(wordcloud)
+wordcloud(words=dico_B$word,freq=dico_B$n,max.word=50,colors = brewer.pal(8,&#39;Dark2&#39;))
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="matrice-documents-termes" class="section level4">
+<h4>Matrice documents-termes</h4>
+<p>Une matrice avec en ligne les documents, en colonne les termes, et en valeurs la fréquence des termes dans les documents.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI3JhcHBlbCBzdHJ1Y3R1cmUgdGlkeVxucHJpbnQoaGVhZChyZXNfQikpXG5gYGAifQ== -->
+<pre class="r"><code>#rappel structure tidy
+print(head(res_B))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2NvbXB0YWdlIGRlcyB0ZXJtZXMgcGFyIGRvY3VtZW50XG5jb21wdGVfQiA8LSByZXNfQiAlPiVcbiAgZ3JvdXBfYnkobGluZSx3b3JkKSAlPiVcbiAgc3VtbWFyaXplKGZyZXE9bigpKVxuXG5wcmludChjb21wdGVfQilcbmBgYCJ9 -->
+<pre class="r"><code>#comptage des termes par document
+compte_B &lt;- res_B %&gt;%
+  group_by(line,word) %&gt;%
+  summarize(freq=n())
+
+print(compte_B)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI27DqWNlc3NpdMOpIGRlIGRpc3Bvc2VyIGRlIGxhIGxpYnJhaXJpZSBcInRtXCJcbmxpYnJhcnkodG0pXG5cbiNcImNhc3RcIiBlbiBNRFQgKHBvbmTDqXJhdGlvbiA9IGZyw6lxdWVuY2UpXG4jYXV0cmUgcG9uZMOpcmF0aW9uIHBvc3NpYmxlLCBleC4gVEYtSURGXG4jY2YuIGh0dHBzOi8vd3d3LnJkb2N1bWVudGF0aW9uLm9yZy9wYWNrYWdlcy90aWR5dGV4dC92ZXJzaW9ucy8wLjMuMi90b3BpY3MvYmluZF90Zl9pZGZcbm1kdF9CIDwtIGNvbXB0ZV9CICU+JVxuICBjYXN0X2R0bShkb2N1bWVudCA9IGxpbmUsIHRlcm0gPSB3b3JkLCB2YWx1ZSA9IGZyZXEpXG5cbiNhZmZpY2hhZ2VcbnByaW50KG1kdF9CKVxuYGBgIn0= -->
+<pre class="r"><code>#nécessité de disposer de la librairie &quot;tm&quot;
+library(tm)
+
+#&quot;cast&quot; en MDT (pondération = fréquence)
+#autre pondération possible, ex. TF-IDF
+#cf. https://www.rdocumentation.org/packages/tidytext/versions/0.3.2/topics/bind_tf_idf
+mdt_B &lt;- compte_B %&gt;%
+  cast_dtm(document = line, term = word, value = freq)
+
+#affichage
+print(mdt_B)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2RhbnMgdW4gZm9ybWF0IFwibWF0cml4XCJcbiNwbHVzIGZhY2lsZSDDoCBtYW5pcHVsZXIgcG91ciBub3VzXG5tYXRfQiA8LSBhcy5tYXRyaXgobWR0X0IpXG5cbiNjbGFzc2VcbnByaW50KGNsYXNzKG1hdF9CKSlcblxuI2RpbWVuc2lvblxucHJpbnQoZGltKG1hdF9CKSlcbmBgYCJ9 -->
+<pre class="r"><code>#dans un format &quot;matrix&quot;
+#plus facile à manipuler pour nous
+mat_B &lt;- as.matrix(mdt_B)
+
+#classe
+print(class(mat_B))
+
+#dimension
+print(dim(mat_B))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="dictionnaire-et-fréquence-des-termes" class="section level4">
+<h4>Dictionnaire et fréquence des termes</h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI3BvdXIgcmFwcGVsXG5oZWFkKGRpY29fQiwyMClcbmBgYCJ9 -->
+<pre class="r"><code>#pour rappel
+head(dico_B,20)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Refaire le calcul à partir de la matrice documents-termes.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQoaGVhZChzb3J0KGNvbFN1bXMobWF0X0IpLGRlY3JlYXNpbmc9VFJVRSksMjApKVxuYGBgIn0= -->
+<pre class="r"><code>print(head(sort(colSums(mat_B),decreasing=TRUE),20))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="apparition-des-termes-dans-les-documents" class="section level4">
+<h4>Apparition des termes dans les documents</h4>
+<p>Nombre de documents où les termes apparaissent au moins une fois.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2NvbXB0YWdlIGRlcyBkb2MuXG5hcHBfdGVybWVzIDwtIGFwcGx5KG1hdF9CLDIsZnVuY3Rpb24oeCl7c3VtKHg+MCl9KVxuXG4jYWZmaWNoYWdlIHRyacOpXG5wcmludChoZWFkKHNvcnQoYXBwX3Rlcm1lcyxkZWNyZWFzaW5nPVRSVUUpLDIwKSlcbmBgYCJ9 -->
+<pre class="r"><code>#comptage des doc.
+app_termes &lt;- apply(mat_B,2,function(x){sum(x&gt;0)})
+
+#affichage trié
+print(head(sort(app_termes,decreasing=TRUE),20))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="filtrage-selon-la-fréquence" class="section level4">
+<h4>Filtrage selon la fréquence</h4>
+<p>Retirer de la matrice les termes qui apparaissent dans trop peu ou trop nombreux documents.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2NvbmRpdGlvbiBzdXIgbGVzIGNvbG9ubmVzXG5tYXRfQl9maWx0ZXJlZCA8LSBtYXRfQlssYXBwX3Rlcm1lcyA+IDEwICYgYXBwX3Rlcm1lcyA8MTAwMF1cblxuI2RpbWVuc2lvbnNcbnByaW50KGRpbShtYXRfQl9maWx0ZXJlZCkpXG5gYGAifQ== -->
+<pre class="r"><code>#condition sur les colonnes
+mat_B_filtered &lt;- mat_B[,app_termes &gt; 10 &amp; app_termes &lt;1000]
+
+#dimensions
+print(dim(mat_B_filtered))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+</div>
+<div id="analyse-via-la-matrice-documents-termes" class="section level2">
+<h2>Analyse via la matrice documents-termes</h2>
+<p>Quelques pistes pour éexploiter la matrice documents-termes.</p>
+<div id="polarité-observée-des-termes" class="section level4">
+<h4>Polarité observée des termes</h4>
+<p>N’oublions pas que les documents sont étiquetés (commentaires positifs ou négatifs). L’idée est de déterminer si les termes sont plus souvent associés à des documents positifs ou négatifs.</p>
+<p>On ne travaille que sur les termes filtrés, avec la pondération binaire.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI3BvbmTDqXJhdGlvbiBiaW5haXJlXG5tYXRfQyA8LSBpZmVsc2UobWF0X0JfZmlsdGVyZWQ+MCwxLDApXG5cbiN0cmFuc2Zvcm1lciBsYSBtYXRyaWNlIGVuIGRhdGEuZnJhbWVcbmRmX0MgPC0gYXMuZGF0YS5mcmFtZShtYXRfQylcbnByaW50KGNsYXNzKGRmX0MpKVxuYGBgIn0= -->
+<pre class="r"><code>#pondération binaire
+mat_C &lt;- ifelse(mat_B_filtered&gt;0,1,0)
+
+#transformer la matrice en data.frame
+df_C &lt;- as.data.frame(mat_C)
+print(class(df_C))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+</div>
+<div id="analyse-des-sentiments-traditionnelle" class="section level2">
+<h2>Analyse des sentiments (traditionnelle)</h2>
+<p>S’intéresser aux polarités de termes pour inférer sur la polarité des documents.</p>
+<div id="lexique-des-sentiments" class="section level4">
+<h4>Lexique des sentiments</h4>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucG9sYXJpdGVfdGVybWVzIDwtIHJlYWQuY3N2KFwiQzpcXFxcVXNlcnNcXFxcZ2FuY2lcXFxcRG9jdW1lbnRzXFxcXG1hc3Rlcl9taWFzaHMgc2FucyBURVJcXFxcQW5hbHlzZSBkZSBkb25uw6llcyB0ZXh0dWVsbGVzXFxcXFByb2pldFxcXFxBbmFseXNlX2Rfb3BpbmlvblxcXFxEb25uw6llc1xcXFxGRUVMLmNzdlwiLHNlcCA9IFwiO1wiLGVuY29kaW5nID0gXCJVVEYtOFwiKVxucHJpbnQocG9sYXJpdGVfdGVybWVzKVxuYGBgIn0= -->
+<pre class="r"><code>polarite_termes &lt;- read.csv(&quot;C:\\Users\\ganci\\Documents\\master_miashs sans TER\\Analyse de données textuelles\\Projet\\Analyse_d_opinion\\Données\\FEEL.csv&quot;,sep = &quot;;&quot;,encoding = &quot;UTF-8&quot;)
+print(polarite_termes)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="polarité-des-documents" class="section level4">
+<h4>Polarité des documents</h4>
+<p>Polarité d’un document = aggrégation de la polarité des termes qui le compose… s’ils sont recensés bien sûr. Pas besoin de partition apprentissage-test ici parce que la classe (label) n’est pas mise à contribution lors de la “modélisation”. L’approche est non-supervisée par nature, pas de risque de surapprentissage.</p>
+<p>Calcul de la polarité des documents par utilisation du lexique des sentiments. Etape par étape.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI3JlY2Vuc2VtZW50IGRlcyB0ZXJtZXMgcGFyIGRvY3VtZW50XG5yZXNfQiAlPiVcbiAgZmlsdGVyKGxpbmU9PTEpXG5gYGAifQ== -->
+<pre class="r"><code>#recensement des termes par document
+res_B %&gt;%
+  filter(line==1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+</div>
+<div id="proportion-de-positivité-dans-un-post" class="section level2">
+<h2>proportion de positivité dans un post</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI3BvbGFyaXTDqSBkZXMgZG9jdW1lbnRzIGTDqWR1aXRlIGRlcyB0ZXJtZXNcbiNxdWkgbGVzIGNvbXBvc2VudFxuIy0tPiBwcm9wb3J0aW9uIGRlcyB0ZXJtZXMgcG9zaXRpZnNcbnBvbHBvc19wZXJfZG9jIDwtIHJlc19CICU+JVxuICBncm91cF9ieShsaW5lKSAlPiVcbiAgbGVmdF9qb2luKHBvbGFyaXRlX3Rlcm1lcyxieT1cIndvcmRcIikgJT4lXG4gIGZpbHRlcighaXMubmEocG9sYXJpdHkpKSAlPiVcbiAgY291bnQocG9sYXJpdHkpICU+JVxuICBzdW1tYXJpc2UoZnJlcV9wb3M9bltwb2xhcml0eT09J3Bvc2l0aXZlJ10vc3VtKG4pKVxuXG4jYWZmaWNoYWdlXG5wcmludChwb2xwb3NfcGVyX2RvYylcbmBgYCJ9 -->
+<pre class="r"><code>#polarité des documents déduite des termes
+#qui les composent
+#--&gt; proportion des termes positifs
+polpos_per_doc &lt;- res_B %&gt;%
+  group_by(line) %&gt;%
+  left_join(polarite_termes,by=&quot;word&quot;) %&gt;%
+  filter(!is.na(polarity)) %&gt;%
+  count(polarity) %&gt;%
+  summarise(freq_pos=n[polarity==&#39;positive&#39;]/sum(n))
+
+#affichage
+print(polpos_per_doc)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="proportion-de-negativité-dans-un-post" class="section level2">
+<h2>proportion de negativité dans un post</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI3BvbGFyaXTDqSBkZXMgZG9jdW1lbnRzIGTDqWR1aXRlIGRlcyB0ZXJtZXNcbiNxdWkgbGVzIGNvbXBvc2VudFxuIy0tPiBwcm9wb3J0aW9uIGRlcyB0ZXJtZXMgcG9zaXRpZnNcbnBvbG5lZ19wZXJfZG9jIDwtIHJlc19CICU+JVxuICBncm91cF9ieShsaW5lKSAlPiVcbiAgbGVmdF9qb2luKHBvbGFyaXRlX3Rlcm1lcyxieT1cIndvcmRcIikgJT4lXG4gIGZpbHRlcighaXMubmEocG9sYXJpdHkpKSAlPiVcbiAgY291bnQocG9sYXJpdHkpICU+JVxuICBzdW1tYXJpc2UoZnJlcV9uZWc9bltwb2xhcml0eT09J25lZ2F0aXZlJ10vc3VtKG4pKVxuXG4jYWZmaWNoYWdlXG5wcmludChwb2xuZWdfcGVyX2RvYylcbmBgYCJ9 -->
+<pre class="r"><code>#polarité des documents déduite des termes
+#qui les composent
+#--&gt; proportion des termes positifs
+polneg_per_doc &lt;- res_B %&gt;%
+  group_by(line) %&gt;%
+  left_join(polarite_termes,by=&quot;word&quot;) %&gt;%
+  filter(!is.na(polarity)) %&gt;%
+  count(polarity) %&gt;%
+  summarise(freq_neg=n[polarity==&#39;negative&#39;]/sum(n))
+
+#affichage
+print(polneg_per_doc)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>#ajout de l’information de la polarité positive et negative de chaque pos</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucDEgPC0gRFBSSU0gJT4lXG4gIGxlZnRfam9pbihwb2xwb3NfcGVyX2RvYyxieT1cImxpbmVcIilcblxucDIgPC0gcDEgJT4lXG4gIGxlZnRfam9pbihwb2xuZWdfcGVyX2RvYyxieT1cImxpbmVcIilcblxuI2FmZmljaGFnZVxucHJpbnQocDIpXG5gYGAifQ== -->
+<pre class="r"><code>p1 &lt;- DPRIM %&gt;%
+  left_join(polpos_per_doc,by=&quot;line&quot;)
+
+p2 &lt;- p1 %&gt;%
+  left_join(polneg_per_doc,by=&quot;line&quot;)
+
+#affichage
+print(p2)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZXNoYXBlMilcblxucmVzX0IgJT4lXG4gIGlubmVyX2pvaW4ocG9sYXJpdGVfdGVybWVzKSAlPiVcbiAgY291bnQod29yZCwgcG9sYXJpdHksIHNvcnQgPSBUUlVFKSAlPiVcbiAgYWNhc3Qod29yZCB+IHBvbGFyaXR5LCB2YWx1ZS52YXIgPSBcIm5cIiwgZmlsbCA9IDEuNSkgJT4lXG4gIGNvbXBhcmlzb24uY2xvdWQoY29sb3JzID0gYyhcInJlZFwiLCBcImdyZWVuXCIpLFxuICAgICAgICAgICAgICAgICAgIG1heC53b3JkcyA9IDEwMClcbmBgYCJ9 -->
+<pre class="r"><code>library(reshape2)
+
+res_B %&gt;%
+  inner_join(polarite_termes) %&gt;%
+  count(word, polarity, sort = TRUE) %&gt;%
+  acast(word ~ polarity, value.var = &quot;n&quot;, fill = 1.5) %&gt;%
+  comparison.cloud(colors = c(&quot;red&quot;, &quot;green&quot;),
+                   max.words = 100)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucG9sIDwtIHJlc19CICU+JVxuICBsZWZ0X2pvaW4ocG9sYXJpdGVfdGVybWVzLGJ5PVwid29yZFwiKSAlPiVcbiAgZ3JvdXBfYnkod29yZCxwb2xhcml0eSkgJT4lXG4gIGZpbHRlcighaXMubmEocG9sYXJpdHkpKSAlPiUgXG4gIHN1bW1hcmlzZShqb2kgPSBzdW0oam95KSxwZXVyID0gc3VtKGZlYXIpLHRyaXN0ZXN0ZT0gc3VtKHNhZG5lc3MpLGhhaW5lID0gc3VtKGFuZ2VyKSxzdXJwcmlzZSA9IHN1bShzdXJwcmlzZSksZGVzID0gc3VtKGRpc2d1c3QpKVxuYGBgIn0= -->
+<pre class="r"><code>pol &lt;- res_B %&gt;%
+  left_join(polarite_termes,by=&quot;word&quot;) %&gt;%
+  group_by(word,polarity) %&gt;%
+  filter(!is.na(polarity)) %&gt;% 
+  summarise(joi = sum(joy),peur = sum(fear),tristeste= sum(sadness),haine = sum(anger),surprise = sum(surprise),des = sum(disgust))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucG9sICU+JSBzb3J0KGpvaSkgJT4lICBmaWx0ZXIoam9pPjIpICU+JSBnZ3Bsb3QoYWVzKGpvaSwgd29yZCwgZmlsbCA9IHBvbGFyaXR5KSkgK1xuICBnZW9tX2NvbChzaG93LmxlZ2VuZCA9IEZBTFNFLHN0YXQ9XCJpZGVudGl0eVwiKSArXG4gIGZhY2V0X3dyYXAofnBvbGFyaXR5LCBzY2FsZXMgPSBcImZyZWVfeVwiKSArXG4gIGxhYnMoeCA9IFwiQ29udHJpYnV0aW9uIHRvIHNlbnRpbWVudFwiLFxuICAgICAgIHkgPSBOVUxMKVxuYGBgIn0= -->
+<pre class="r"><code>pol %&gt;% sort(joi) %&gt;%  filter(joi&gt;2) %&gt;% ggplot(aes(joi, word, fill = polarity)) +
+  geom_col(show.legend = FALSE,stat=&quot;identity&quot;) +
+  facet_wrap(~polarity, scales = &quot;free_y&quot;) +
+  labs(x = &quot;Contribution to sentiment&quot;,
+       y = NULL)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Attention, certains documents ne sont pas recensés (1916 documents notés en tout) parce qu’ils ne présentent aucun terme “positif”.</p>
+<p>Prédiction par comparaison avec le seuil 0.5 c.-à-d. est considéré comme positif un commentaire s’il est composé au moins pour moitié de termes positifs.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI3Byw6lkaWN0aW9uIHN1ciBjZXR0ZSBiYXNlXG5wcmVkX3BvbGFyaXRlIDwtIHJlcCgwLG5yb3coZGYpKVxuXG4jYWZmZWN0YXRpb24gLS0gdGVybmlyIGNvbXB0ZSBkZXMgZG9jLiBub24gcmVjZW5zw6lzXG5wcmVkX3BvbGFyaXRlW3BvbF9wZXJfZG9jJGxpbmVdIDwtIHBvbF9wZXJfZG9jJGZyZXFfcG9zXG5cbiNjbGFzc2UgcHLDqWRpdGVcbmNsYXNzX3ByZWRfcG9sYXJpdGUgPC0gaWZlbHNlKHByZWRfcG9sYXJpdGUgPj0gMC42NSxcInBvc2l0aXZlXCIsXCJuZWdhdGl2ZVwiKVxucHJpbnQodGFibGUoY2xhc3NfcHJlZF9wb2xhcml0ZSkpXG5gYGAifQ== -->
+<pre class="r"><code>#prédiction sur cette base
+pred_polarite &lt;- rep(0,nrow(df))
+
+#affectation -- ternir compte des doc. non recensés
+pred_polarite[pol_per_doc$line] &lt;- pol_per_doc$freq_pos
+
+#classe prédite
+class_pred_polarite &lt;- ifelse(pred_polarite &gt;= 0.65,&quot;positive&quot;,&quot;negative&quot;)
+print(table(class_pred_polarite))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucDIgPC0gcDIgJT4lIG11dGF0ZShwb2xhaW50ZXI9aWZlbHNlKGZyZXFfcG9zPj0gMC42MCxcInBvc2l0aXZlXCIsXCJuZWdhdGl2ZVwiKSlcbmBgYCJ9 -->
+<pre class="r"><code>p2 &lt;- p2 %&gt;% mutate(polainter=ifelse(freq_pos&gt;= 0.60,&quot;positive&quot;,&quot;negative&quot;))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucDIgPC0gcDIgJT4lIG11dGF0ZShwb2xhX2ZpbmFsPWlmZWxzZSghaXMubmEocG9sYWludGVyKSxwb2xhaW50ZXIsXCJuZXV0cmVcIikpXG5gYGAifQ== -->
+<pre class="r"><code>p2 &lt;- p2 %&gt;% mutate(pola_final=ifelse(!is.na(polainter),polainter,&quot;neutre&quot;))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZCA8LSByb3VuZChwcm9wLnRhYmxlKHRhYmxlKHAyJHBvbGFfZmluYWwpKSoxMDAsMikgJT4lIGFzLmRhdGEuZnJhbWUoKVxuYGNvbG5hbWVzPC1gKGQsYyhcInNlbnRpbWVudFwiLFwicHJvcFwiKSlcbmNvbG5hbWVzKGQpIDwtIGMoXCJzZW50aW1lbnRcIixcInByb3BcIilcbmBgYCJ9 -->
+<pre class="r"><code>d &lt;- round(prop.table(table(p2$pola_final))*100,2) %&gt;% as.data.frame()
+`colnames&lt;-`(d,c(&quot;sentiment&quot;,&quot;prop&quot;))
+colnames(d) &lt;- c(&quot;sentiment&quot;,&quot;prop&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2dwbG90KGQsYWVzKHNlbnRpbWVudCwgcHJvcCkpICtcbiAgZ2VvbV9iYXIoc3RhdD1cImlkZW50aXR5XCIpICtcbiAgbGFicyh4ID0gXCJzZW50aW1lbnRcIixcbiAgICAgICB5ID0gTlVMTClcbmBgYCJ9 -->
+<pre class="r"><code>ggplot(d,aes(sentiment, prop)) +
+  geom_bar(stat=&quot;identity&quot;) +
+  labs(x = &quot;sentiment&quot;,
+       y = NULL)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2dwbG90KGRhdGE9ZCwgYWVzKHg9c2VudGltZW50LCB5PXByb3ApKSArXG4gIGdlb21fYmFyKHN0YXQ9XCJpZGVudGl0eVwiLCBmaWxsPVwic3RlZWxibHVlXCIpK1xuICBnZW9tX3RleHQoYWVzKGxhYmVsPXByb3ApLCB2anVzdD0tMC4zLCBzaXplPTMuNSkrXG4gIHRoZW1lX21pbmltYWwoKVxuXG5nZ3NhdmUoXCJyZXN1bHRhdC5wbmdcIilcbmBgYCJ9 -->
+<pre class="r"><code>ggplot(data=d, aes(x=sentiment, y=prop)) +
+  geom_bar(stat=&quot;identity&quot;, fill=&quot;steelblue&quot;)+
+  geom_text(aes(label=prop), vjust=-0.3, size=3.5)+
+  theme_minimal()
+
+ggsave(&quot;resultat.png&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Confrontation avec les classes observées.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI21hdHJpY2UgZGUgY29uZnVzaW9uXG5tYyA8LXRhYmxlKGRmJHNlbnRpbWVudCxjbGFzc19wcmVkX3BvbGFyaXRlKSBcbnByaW50KG1jKVxuYGBgIn0= -->
+<pre class="r"><code>#matrice de confusion
+mc &lt;-table(df$sentiment,class_pred_polarite) 
+print(mc)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2FjY3VyYWN5XG5wcmludChzdW0oZGlhZyhtYykpL3N1bShtYykpXG5gYGAifQ== -->
+<pre class="r"><code>#accuracy
+print(sum(diag(mc))/sum(mc))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCg0KYGBge3J9DQojdmlkZXIgbGEgbcOpbW9pcmUNCnJtKGxpc3Q9bHMoKSkNCg0KI2NoYW5nZXIgZGUgZG9zc2llciBjb3VyYW50DQojIHNldHdkKCJDOi9Vc2Vycy9yaWNjby9EZXNrdG9wL2RlbW8iKQ0KDQojY2hhcmdlciBsZXMgcGFja2FnZXMgZGUgbCd1bml2ZXJzIFRpZHkNCiNlbiBwYXJ0aWN1bGllciBkcGx5cg0KbGlicmFyeSh0aWR5dmVyc2UpDQoNCiNjaGFyZ2VyIGxlcyBkb25uw6llcw0KI2F2ZWMgbGUgcGFja2FnZSByZWFkeGwNCmRmIDwtIHJlYWQuY3N2KCJDOlxcVXNlcnNcXGdhbmNpXFxEb2N1bWVudHNcXG1hc3Rlcl9taWFzaHMgc2FucyBURVJcXEFuYWx5c2UgZGUgZG9ubsOpZXMgdGV4dHVlbGxlc1xcUHJvamV0XFxBbmFseXNlX2Rfb3BpbmlvblxcRG9ubsOpZXNcXGNvcnB1c19ib2dkYW5vZi5jc3YiLGVuY29kaW5nID0gIlVURi04IikNCnN0cihkZikNCmBgYA0KDQoNCmBgYHtyfQ0KI3ByZW1pZXJzIGRvY3VtZW50cyBkZSBsYSBiYXNlIGRlIGRvbm7DqWVzDQpoZWFkKGRmKQ0KYGBgDQpgDQoNCg0KDQoNCg0KIyMgVGlkeVRleHQgLSBQcmVtacOocmVzIGV4cGxvcmF0aW9ucw0KDQojIyMjIFByw6lwYXJhdGlvbiBkZXMgZG9ubsOpZXMNCg0KYGBge3J9DQojY2hhcmdlciBzcMOpY2lmaXF1ZW1lbnQgbGEgbGlicmFpcmUgdGlkeXRleHQNCmxpYnJhcnkodGlkeXRleHQpDQpgYGANCg0KDQoNCkxhIG51bcOpcm90YXRpb24gZGVzIGRvY3VtZW50cyBwZXJtZXQgZGUgbWlldXggY29tcHJlbmRyZSBsZXMgYXNzb2NpYXRpb25zIGRlcyB0ZXJtZXMgYXZlYyBsZXMgZG9jdW1lbnRzIHBhciBsYSBzdWl0ZS4NCg0KYGBge3J9DQojbW9kaWZpZXIgbGEgc3RydWN0dXJlIGR1IHRpYmJsZQ0KI2VuIG51bcOpcm90YW50IGxlcyBkb2N1bWVudHMNCkRQUklNIDwtIHRpYmJsZShsaW5lPTE6bnJvdyhkZikscG9zdD1kZiRwb3N0KQ0KcHJpbnQoaGVhZChEUFJJTSkpDQpgYGANCg0KDQoNCiMjIyMgVG9rZW5pc2F0aW9uDQoNClRyYW5zZm9ybWF0aW9uIGRlcyBkb2N1bWVudHMgZW4gdW5lIHN0cnVjdHVyZSAidGlkeSIsIGVuIHJlY2Vuc2FudCBsZXMgbW90cyBwYXIgZG9jdW1lbnQuIEwnaW5mb3JtYXRpb24gc3VyIGwnb3JkcmUgZGVzIG1vdHMgZXN0IHBlcmR1ZS4gT24gbm90ZSBlbiByZXZhbmNoZSBxdWUgbGEgY2Fzc2UgYSDDqXTDqSBjaGFuZ8OpZSwgbGEgcG9uY3R1YXRpb24gYSDDqXTDqSBzdXBwcmltw6llLg0KDQpgYGB7cn0NCiN0cmFpdGVyIGxlIHRleHRlIGJydXQNCnJlc19BIDwtIERQUklNICU+JQ0KICB1bm5lc3RfdG9rZW5zKG91dHB1dD1zZW50ZW5jZXMsaW5wdXQ9cG9zdCx0b2tlbiA9ICJzZW50ZW5jZXMiKQ0KDQojDQpwcmludChyZXNfQSkNCmBgYA==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCg0KYGBge3J9DQojdmlkZXIgbGEgbcOpbW9pcmUNCnJtKGxpc3Q9bHMoKSkNCg0KI2NoYW5nZXIgZGUgZG9zc2llciBjb3VyYW50DQojIHNldHdkKCJDOi9Vc2Vycy9yaWNjby9EZXNrdG9wL2RlbW8iKQ0KDQojY2hhcmdlciBsZXMgcGFja2FnZXMgZGUgbCd1bml2ZXJzIFRpZHkNCiNlbiBwYXJ0aWN1bGllciBkcGx5cg0KbGlicmFyeSh0aWR5dmVyc2UpDQoNCiNjaGFyZ2VyIGxlcyBkb25uw6llcw0KI2F2ZWMgbGUgcGFja2FnZSByZWFkeGwNCmRmIDwtIHJlYWQuY3N2KCJDOlxcVXNlcnNcXGdhbmNpXFxEb2N1bWVudHNcXG1hc3Rlcl9taWFzaHMgc2FucyBURVJcXEFuYWx5c2UgZGUgZG9ubsOpZXMgdGV4dHVlbGxlc1xcUHJvamV0XFxBbmFseXNlX2Rfb3BpbmlvblxcRG9ubsOpZXNcXGNvcnB1c19ib2dkYW5vZnIuY3N2IixlbmNvZGluZyA9ICJVVEYtOCIpDQoNCmBgYA0KDQoNCmBgYHtyfQ0KI3ByZW1pZXJzIGRvY3VtZW50cyBkZSBsYSBiYXNlIGRlIGRvbm7DqWVzDQpoZWFkKGRmKQ0KYGBgDQpgDQoNCg0KDQoNCg0KIyMgVGlkeVRleHQgLSBQcmVtacOocmVzIGV4cGxvcmF0aW9ucw0KDQojIyMjIFByw6lwYXJhdGlvbiBkZXMgZG9ubsOpZXMNCg0KYGBge3J9DQojY2hhcmdlciBzcMOpY2lmaXF1ZW1lbnQgbGEgbGlicmFpcmUgdGlkeXRleHQNCmxpYnJhcnkodGlkeXRleHQpDQpgYGANCg0KDQoNCkxhIG51bcOpcm90YXRpb24gZGVzIGRvY3VtZW50cyBwZXJtZXQgZGUgbWlldXggY29tcHJlbmRyZSBsZXMgYXNzb2NpYXRpb25zIGRlcyB0ZXJtZXMgYXZlYyBsZXMgZG9jdW1lbnRzIHBhciBsYSBzdWl0ZS4NCg0KYGBge3J9DQojbW9kaWZpZXIgbGEgc3RydWN0dXJlIGR1IHRpYmJsZQ0KI2VuIG51bcOpcm90YW50IGxlcyBkb2N1bWVudHMNCkRQUklNIDwtIHRpYmJsZShsaW5lPTE6bnJvdyhkZikscG9zdD1kZiRwb3N0ZmluYWwpDQpwcmludChoZWFkKERQUklNKSkNCmBgYA0KDQoNCg0KIyMjIyBUb2tlbmlzYXRpb24NCg0KVHJhbnNmb3JtYXRpb24gZGVzIGRvY3VtZW50cyBlbiB1bmUgc3RydWN0dXJlICJ0aWR5IiwgZW4gcmVjZW5zYW50IGxlcyBtb3RzIHBhciBkb2N1bWVudC4gTCdpbmZvcm1hdGlvbiBzdXIgbCdvcmRyZSBkZXMgbW90cyBlc3QgcGVyZHVlLiBPbiBub3RlIGVuIHJldmFuY2hlIHF1ZSBsYSBjYXNzZSBhIMOpdMOpIGNoYW5nw6llLCBsYSBwb25jdHVhdGlvbiBhIMOpdMOpIHN1cHByaW3DqWUuDQoNCmBgYHtyfQ0KI3RyYWl0ZXIgbGUgdGV4dGUgYnJ1dA0KcmVzX0EgPC0gRFBSSU0gJT4lDQogIHVubmVzdF90b2tlbnMob3V0cHV0PXdvcmQsaW5wdXQ9cG9zdCkNCg0KIw0KIyBwcmludChyZXNfQSkNCmBgYA0KDQoNCg0KDQojIyMjIEluc3BlY3Rpb24gZHUgMWVyIGRvY3VtZW50DQoNCmBgYHtyfQ0KI3NpIG9uIHMnZW4gdGllbnQgYXV4IG1vdHMgZHUgcHJlbWllciBkb2N1bWVudA0KbW90c18xIDwtIHJlc19BICU+JQ0KICBmaWx0ZXIobGluZT09MSkgJT4lDQogIHNlbGVjdCh3b3JkKQ0KDQpwcmludChtb3RzXzEkd29yZCkNCmBgYA0KDQoNCg0KDQpgYGB7cn0NCiNjb21wdGFnZSBkZXMgdGVybWVzIHBhciBkb2N1bWVudA0KY29tcHRlX0EgPC0gcmVzX0EgJT4lDQogIGdyb3VwX2J5KGxpbmUsd29yZCkgJT4lDQogIHN1bW1hcml6ZShmcmVxPW4oKSkNCg0KcHJpbnQoY29tcHRlX0EpDQpgYGANCg0KDQojIyMjIERpY3Rpb25uYWlyZSBnbG9iYWwgZGVzIHRlcm1lcw0KYGBge3J9DQojZGljdGlvbm5haXJlIC0gY29tcHRhZ2UNCiNvcmRvbm5hbmNlbWVudCBzZWxvbiBsYSBmcsOpcXVlbmNlDQpkaWNvX0EgPC0gcmVzX0EgJT4lDQogIGNvdW50KHdvcmQsc29ydD1UUlVFKQ0KDQojYWZmaWNoYWdlDQpwcmludChkaWNvX0EpDQpgYGANCg0KDQoNCmBgYHtyfQ0KI2xlcyB0ZXJtZXMgbGVzIG1vaW5zIGZyw6lxdWVudHMNCnByaW50KHRhaWwoZGljb19BKSkNCmBgYA0KDQojIyBUaWR5VGV4dCAtIE5ldHRveWFnZSBkZXMgZG9ubsOpZXMNCg0KIyMjIyBTdG9wd29yZHMgKG1vdHMtdmlkZXMpDQoNCkxpYnJhaXJpZSBwb3VyIGxlcyBzdG9wd29yZHMgZW4gZnJhbmNhaXMuDQoNCmBgYHtyfQ0KI3LDqWN1cMOpcmF0aW9uIGRlcyBzdG9wd29yZHMNCmxpYnJhcnkoImxzYSIpDQpkYXRhKHN0b3B3b3Jkc19mcikNCiMgcHJpbnQoc3RvcHdvcmRzX2ZyKQ0KYGBgDQoNCg0KIyMjIyBUb2tlbmlzYXRpb24gZmluYWxlIGR1IGRhdGFzZXQNCg0KU2FucyBsZXMgY2hpZmZyZXMsIGxhIGJhbGlzZSAic2F1dCBkZSBsaWduZSIgZXQgbGVzIHN0b3B3b3Jkcy4NCg0KDQpgYGB7cn0NCiNkZXV4acOobWUgdmVyc2lvbiwgc2FucyBsZXMgY2hpZmZyZXMgZXQgbGVzIGJyDQpyZXNfQiA8LSBEUFJJTSAlPiUNCiAgbXV0YXRlKHRleHQ9Z3N1Yih4PXBvc3QscGF0dGVybj0iWzAtOV0iLHJlcGxhY2VtZW50PSIiKSkgJT4lDQogIG11dGF0ZSh0ZXh0PWdzdWIoeD1wb3N0LHBhdHRlcm49IsOjIixyZXBsYWNlbWVudD0iZSIpKSAlPiUNCiAgbXV0YXRlKHRleHQ9Z3N1Yih4PXBvc3QscGF0dGVybj0iw6IiLHJlcGxhY2VtZW50PSJlIikpICU+JQ0KICB1bm5lc3RfdG9rZW5zKG91dHB1dD13b3JkLGlucHV0PXRleHQpICU+JQ0KICBmaWx0ZXIoIXdvcmQgJWluJSBzdG9wd29yZHNfZnIpICU+JQ0KICBzZWxlY3QobGluZSx3b3JkKQ0KDQojYWZmaWNoYWdlDQpwcmludChyZXNfQikNCmBgYA0KDQoNCiMjIyMgRGljdGlvbm5haXJlIGRlcyB0ZXJtZXMNCg0KYGBge3J9DQojZGljdGlvbm5haXJlDQpkaWNvX0IgPC0gcmVzX0IgJT4lDQogIGNvdW50KHdvcmQsc29ydD1UUlVFKQ0KDQpwcmludChkaWNvX0IpDQpgYGANCg0KQXZlYyB1biBwZXRpdCAid29yZGNsb3VkIiBwb3VyIGZhaXJlIGpvbGkuLi4NCg0KYGBge3J9DQojdW4gcGV0aXQgd29yZGNsb3VkIGljaQ0KbGlicmFyeSh3b3JkY2xvdWQpDQp3b3JkY2xvdWQod29yZHM9ZGljb19CJHdvcmQsZnJlcT1kaWNvX0IkbixtYXgud29yZD01MCxjb2xvcnMgPSBicmV3ZXIucGFsKDgsJ0RhcmsyJykpDQoNCmBgYA0KDQojIyMjIE1hdHJpY2UgZG9jdW1lbnRzLXRlcm1lcw0KDQpVbmUgbWF0cmljZSBhdmVjIGVuIGxpZ25lIGxlcyBkb2N1bWVudHMsIGVuIGNvbG9ubmUgbGVzIHRlcm1lcywgZXQgZW4gdmFsZXVycyBsYSBmcsOpcXVlbmNlIGRlcyB0ZXJtZXMgZGFucyBsZXMgZG9jdW1lbnRzLg0KDQpgYGB7cn0NCiNyYXBwZWwgc3RydWN0dXJlIHRpZHkNCnByaW50KGhlYWQocmVzX0IpKQ0KYGBgDQoNCg0KYGBge3J9DQojY29tcHRhZ2UgZGVzIHRlcm1lcyBwYXIgZG9jdW1lbnQNCmNvbXB0ZV9CIDwtIHJlc19CICU+JQ0KICBncm91cF9ieShsaW5lLHdvcmQpICU+JQ0KICBzdW1tYXJpemUoZnJlcT1uKCkpDQoNCnByaW50KGNvbXB0ZV9CKQ0KYGBgDQoNCg0KDQoNCmBgYHtyfQ0KI27DqWNlc3NpdMOpIGRlIGRpc3Bvc2VyIGRlIGxhIGxpYnJhaXJpZSAidG0iDQpsaWJyYXJ5KHRtKQ0KDQojImNhc3QiIGVuIE1EVCAocG9uZMOpcmF0aW9uID0gZnLDqXF1ZW5jZSkNCiNhdXRyZSBwb25kw6lyYXRpb24gcG9zc2libGUsIGV4LiBURi1JREYNCiNjZi4gaHR0cHM6Ly93d3cucmRvY3VtZW50YXRpb24ub3JnL3BhY2thZ2VzL3RpZHl0ZXh0L3ZlcnNpb25zLzAuMy4yL3RvcGljcy9iaW5kX3RmX2lkZg0KbWR0X0IgPC0gY29tcHRlX0IgJT4lDQogIGNhc3RfZHRtKGRvY3VtZW50ID0gbGluZSwgdGVybSA9IHdvcmQsIHZhbHVlID0gZnJlcSkNCg0KI2FmZmljaGFnZQ0KcHJpbnQobWR0X0IpDQpgYGANCg0KDQpgYGB7cn0NCiNkYW5zIHVuIGZvcm1hdCAibWF0cml4Ig0KI3BsdXMgZmFjaWxlIMOgIG1hbmlwdWxlciBwb3VyIG5vdXMNCm1hdF9CIDwtIGFzLm1hdHJpeChtZHRfQikNCg0KI2NsYXNzZQ0KcHJpbnQoY2xhc3MobWF0X0IpKQ0KDQojZGltZW5zaW9uDQpwcmludChkaW0obWF0X0IpKQ0KYGBgDQoNCiMjIyMgRGljdGlvbm5haXJlIGV0IGZyw6lxdWVuY2UgZGVzIHRlcm1lcw0KYGBge3J9DQojcG91ciByYXBwZWwNCmhlYWQoZGljb19CLDIwKQ0KYGBgDQoNClJlZmFpcmUgbGUgY2FsY3VsIMOgIHBhcnRpciBkZSBsYSBtYXRyaWNlIGRvY3VtZW50cy10ZXJtZXMuDQoNCmBgYHtyfQ0KcHJpbnQoaGVhZChzb3J0KGNvbFN1bXMobWF0X0IpLGRlY3JlYXNpbmc9VFJVRSksMjApKQ0KYGBgDQoNCg0KIyMjIyBBcHBhcml0aW9uIGRlcyB0ZXJtZXMgZGFucyBsZXMgZG9jdW1lbnRzDQpOb21icmUgZGUgZG9jdW1lbnRzIG/DuSBsZXMgdGVybWVzIGFwcGFyYWlzc2VudCBhdSBtb2lucyB1bmUgZm9pcy4NCg0KYGBge3J9DQojY29tcHRhZ2UgZGVzIGRvYy4NCmFwcF90ZXJtZXMgPC0gYXBwbHkobWF0X0IsMixmdW5jdGlvbih4KXtzdW0oeD4wKX0pDQoNCiNhZmZpY2hhZ2UgdHJpw6kNCnByaW50KGhlYWQoc29ydChhcHBfdGVybWVzLGRlY3JlYXNpbmc9VFJVRSksMjApKQ0KYGBgDQoNCiMjIyMgRmlsdHJhZ2Ugc2Vsb24gbGEgZnLDqXF1ZW5jZQ0KUmV0aXJlciBkZSBsYSBtYXRyaWNlIGxlcyB0ZXJtZXMgcXVpIGFwcGFyYWlzc2VudCBkYW5zIHRyb3AgcGV1IG91IHRyb3Agbm9tYnJldXggZG9jdW1lbnRzLg0KDQpgYGB7cn0NCiNjb25kaXRpb24gc3VyIGxlcyBjb2xvbm5lcw0KbWF0X0JfZmlsdGVyZWQgPC0gbWF0X0JbLGFwcF90ZXJtZXMgPiAxMCAmIGFwcF90ZXJtZXMgPDEwMDBdDQoNCiNkaW1lbnNpb25zDQpwcmludChkaW0obWF0X0JfZmlsdGVyZWQpKQ0KYGBgDQoNCiMjIEFuYWx5c2UgdmlhIGxhIG1hdHJpY2UgZG9jdW1lbnRzLXRlcm1lcw0KDQpRdWVscXVlcyBwaXN0ZXMgcG91ciDDqWV4cGxvaXRlciBsYSBtYXRyaWNlIGRvY3VtZW50cy10ZXJtZXMuDQoNCiMjIyMgUG9sYXJpdMOpIG9ic2VydsOpZSBkZXMgdGVybWVzDQoNCk4nb3VibGlvbnMgcGFzIHF1ZSBsZXMgZG9jdW1lbnRzIHNvbnQgw6l0aXF1ZXTDqXMgKGNvbW1lbnRhaXJlcyBwb3NpdGlmcyBvdSBuw6lnYXRpZnMpLiBMJ2lkw6llIGVzdCBkZSBkw6l0ZXJtaW5lciBzaSBsZXMgdGVybWVzIHNvbnQgcGx1cyBzb3V2ZW50IGFzc29jacOpcyDDoCBkZXMgZG9jdW1lbnRzIHBvc2l0aWZzIG91IG7DqWdhdGlmcy4NCg0KT24gbmUgdHJhdmFpbGxlIHF1ZSBzdXIgbGVzIHRlcm1lcyBmaWx0csOpcywgYXZlYyBsYSBwb25kw6lyYXRpb24gYmluYWlyZS4NCg0KDQpgYGB7cn0NCiNwb25kw6lyYXRpb24gYmluYWlyZQ0KbWF0X0MgPC0gaWZlbHNlKG1hdF9CX2ZpbHRlcmVkPjAsMSwwKQ0KDQojdHJhbnNmb3JtZXIgbGEgbWF0cmljZSBlbiBkYXRhLmZyYW1lDQpkZl9DIDwtIGFzLmRhdGEuZnJhbWUobWF0X0MpDQpwcmludChjbGFzcyhkZl9DKSkNCmBgYA0KDQoNCiMjIEFuYWx5c2UgZGVzIHNlbnRpbWVudHMgKHRyYWRpdGlvbm5lbGxlKQ0KDQpTJ2ludMOpcmVzc2VyIGF1eCBwb2xhcml0w6lzIGRlIHRlcm1lcyBwb3VyIGluZsOpcmVyIHN1ciBsYSBwb2xhcml0w6kgZGVzIGRvY3VtZW50cy4NCg0KIyMjIyBMZXhpcXVlIGRlcyBzZW50aW1lbnRzDQoNCmBgYHtyfQ0KcG9sYXJpdGVfdGVybWVzIDwtIHJlYWQuY3N2KCJDOlxcVXNlcnNcXGdhbmNpXFxEb2N1bWVudHNcXG1hc3Rlcl9taWFzaHMgc2FucyBURVJcXEFuYWx5c2UgZGUgZG9ubsOpZXMgdGV4dHVlbGxlc1xcUHJvamV0XFxBbmFseXNlX2Rfb3BpbmlvblxcRG9ubsOpZXNcXEZFRUwuY3N2IixzZXAgPSAiOyIsZW5jb2RpbmcgPSAiVVRGLTgiKQ0KcHJpbnQocG9sYXJpdGVfdGVybWVzKQ0KYGBgDQoNCiMjIyMgUG9sYXJpdMOpIGRlcyBkb2N1bWVudHMNClBvbGFyaXTDqSBkJ3VuIGRvY3VtZW50ID0gYWdncsOpZ2F0aW9uIGRlIGxhIHBvbGFyaXTDqSBkZXMgdGVybWVzIHF1aSBsZSBjb21wb3NlLi4uIHMnaWxzIHNvbnQgcmVjZW5zw6lzIGJpZW4gc8O7ci4gUGFzIGJlc29pbiBkZSBwYXJ0aXRpb24gYXBwcmVudGlzc2FnZS10ZXN0IGljaSBwYXJjZSBxdWUgbGEgY2xhc3NlIChsYWJlbCkgbidlc3QgcGFzIG1pc2Ugw6AgY29udHJpYnV0aW9uIGxvcnMgZGUgbGEgIm1vZMOpbGlzYXRpb24iLiBMJ2FwcHJvY2hlIGVzdCBub24tc3VwZXJ2aXPDqWUgcGFyIG5hdHVyZSwgcGFzIGRlIHJpc3F1ZSBkZSBzdXJhcHByZW50aXNzYWdlLg0KDQpDYWxjdWwgZGUgbGEgcG9sYXJpdMOpIGRlcyBkb2N1bWVudHMgcGFyIHV0aWxpc2F0aW9uIGR1IGxleGlxdWUgZGVzIHNlbnRpbWVudHMuIEV0YXBlIHBhciDDqXRhcGUuDQoNCmBgYHtyfQ0KI3JlY2Vuc2VtZW50IGRlcyB0ZXJtZXMgcGFyIGRvY3VtZW50DQpyZXNfQiAlPiUNCiAgZmlsdGVyKGxpbmU9PTEpDQpgYGANCg0KDQojIyBwcm9wb3J0aW9uIGRlIHBvc2l0aXZpdMOpIGRhbnMgdW4gcG9zdA0KYGBge3J9DQojcG9sYXJpdMOpIGRlcyBkb2N1bWVudHMgZMOpZHVpdGUgZGVzIHRlcm1lcw0KI3F1aSBsZXMgY29tcG9zZW50DQojLS0+IHByb3BvcnRpb24gZGVzIHRlcm1lcyBwb3NpdGlmcw0KcG9scG9zX3Blcl9kb2MgPC0gcmVzX0IgJT4lDQogIGdyb3VwX2J5KGxpbmUpICU+JQ0KICBsZWZ0X2pvaW4ocG9sYXJpdGVfdGVybWVzLGJ5PSJ3b3JkIikgJT4lDQogIGZpbHRlcighaXMubmEocG9sYXJpdHkpKSAlPiUNCiAgY291bnQocG9sYXJpdHkpICU+JQ0KICBzdW1tYXJpc2UoZnJlcV9wb3M9bltwb2xhcml0eT09J3Bvc2l0aXZlJ10vc3VtKG4pKQ0KDQojYWZmaWNoYWdlDQpwcmludChwb2xwb3NfcGVyX2RvYykNCmBgYA0KDQoNCg0KIyMgcHJvcG9ydGlvbiBkZSBuZWdhdGl2aXTDqSBkYW5zIHVuIHBvc3QNCmBgYHtyfQ0KI3BvbGFyaXTDqSBkZXMgZG9jdW1lbnRzIGTDqWR1aXRlIGRlcyB0ZXJtZXMNCiNxdWkgbGVzIGNvbXBvc2VudA0KIy0tPiBwcm9wb3J0aW9uIGRlcyB0ZXJtZXMgcG9zaXRpZnMNCnBvbG5lZ19wZXJfZG9jIDwtIHJlc19CICU+JQ0KICBncm91cF9ieShsaW5lKSAlPiUNCiAgbGVmdF9qb2luKHBvbGFyaXRlX3Rlcm1lcyxieT0id29yZCIpICU+JQ0KICBmaWx0ZXIoIWlzLm5hKHBvbGFyaXR5KSkgJT4lDQogIGNvdW50KHBvbGFyaXR5KSAlPiUNCiAgc3VtbWFyaXNlKGZyZXFfbmVnPW5bcG9sYXJpdHk9PSduZWdhdGl2ZSddL3N1bShuKSkNCg0KI2FmZmljaGFnZQ0KcHJpbnQocG9sbmVnX3Blcl9kb2MpDQpgYGANCg0KI2Fqb3V0IGRlIGwnaW5mb3JtYXRpb24gZGUgbGEgcG9sYXJpdMOpIHBvc2l0aXZlIGV0IG5lZ2F0aXZlIGRlIGNoYXF1ZSBwb3MNCg0KYGBge3J9DQpwMSA8LSBEUFJJTSAlPiUNCiAgbGVmdF9qb2luKHBvbHBvc19wZXJfZG9jLGJ5PSJsaW5lIikNCg0KcDIgPC0gcDEgJT4lDQogIGxlZnRfam9pbihwb2xuZWdfcGVyX2RvYyxieT0ibGluZSIpDQoNCiNhZmZpY2hhZ2UNCnByaW50KHAyKQ0KYGBgDQoNCg0KYGBge3J9DQpsaWJyYXJ5KHJlc2hhcGUyKQ0KDQpyZXNfQiAlPiUNCiAgaW5uZXJfam9pbihwb2xhcml0ZV90ZXJtZXMpICU+JQ0KICBjb3VudCh3b3JkLCBwb2xhcml0eSwgc29ydCA9IFRSVUUpICU+JQ0KICBhY2FzdCh3b3JkIH4gcG9sYXJpdHksIHZhbHVlLnZhciA9ICJuIiwgZmlsbCA9IDEuNSkgJT4lDQogIGNvbXBhcmlzb24uY2xvdWQoY29sb3JzID0gYygicmVkIiwgImdyZWVuIiksDQogICAgICAgICAgICAgICAgICAgbWF4LndvcmRzID0gMTAwKQ0KYGBgDQoNCg0KYGBge3J9DQpwb2wgPC0gcmVzX0IgJT4lDQogIGxlZnRfam9pbihwb2xhcml0ZV90ZXJtZXMsYnk9IndvcmQiKSAlPiUNCiAgZ3JvdXBfYnkod29yZCxwb2xhcml0eSkgJT4lDQogIGZpbHRlcighaXMubmEocG9sYXJpdHkpKSAlPiUgDQogIHN1bW1hcmlzZShqb2kgPSBzdW0oam95KSxwZXVyID0gc3VtKGZlYXIpLHRyaXN0ZXN0ZT0gc3VtKHNhZG5lc3MpLGhhaW5lID0gc3VtKGFuZ2VyKSxzdXJwcmlzZSA9IHN1bShzdXJwcmlzZSksZGVzID0gc3VtKGRpc2d1c3QpKQ0KYGBgDQoNCmBgYHtyfQ0KcG9sICU+JSBzb3J0KGpvaSkgJT4lICBmaWx0ZXIoam9pPjIpICU+JSBnZ3Bsb3QoYWVzKGpvaSwgd29yZCwgZmlsbCA9IHBvbGFyaXR5KSkgKw0KICBnZW9tX2NvbChzaG93LmxlZ2VuZCA9IEZBTFNFLHN0YXQ9ImlkZW50aXR5IikgKw0KICBmYWNldF93cmFwKH5wb2xhcml0eSwgc2NhbGVzID0gImZyZWVfeSIpICsNCiAgbGFicyh4ID0gIkNvbnRyaWJ1dGlvbiB0byBzZW50aW1lbnQiLA0KICAgICAgIHkgPSBOVUxMKQ0KYGBgDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCkF0dGVudGlvbiwgY2VydGFpbnMgZG9jdW1lbnRzIG5lIHNvbnQgcGFzIHJlY2Vuc8OpcyAoMTkxNiBkb2N1bWVudHMgbm90w6lzIGVuIHRvdXQpIHBhcmNlIHF1J2lscyBuZSBwcsOpc2VudGVudCBhdWN1biB0ZXJtZSAicG9zaXRpZiIuDQoNClByw6lkaWN0aW9uIHBhciBjb21wYXJhaXNvbiBhdmVjIGxlIHNldWlsIDAuNSBjLi3DoC1kLiBlc3QgY29uc2lkw6lyw6kgY29tbWUgcG9zaXRpZiB1biBjb21tZW50YWlyZSBzJ2lsIGVzdCBjb21wb3PDqSBhdSBtb2lucyBwb3VyIG1vaXRpw6kgZGUgdGVybWVzIHBvc2l0aWZzLg0KDQpgYGB7cn0NCiNwcsOpZGljdGlvbiBzdXIgY2V0dGUgYmFzZQ0KcHJlZF9wb2xhcml0ZSA8LSByZXAoMCxucm93KGRmKSkNCg0KI2FmZmVjdGF0aW9uIC0tIHRlcm5pciBjb21wdGUgZGVzIGRvYy4gbm9uIHJlY2Vuc8Opcw0KcHJlZF9wb2xhcml0ZVtwb2xfcGVyX2RvYyRsaW5lXSA8LSBwb2xfcGVyX2RvYyRmcmVxX3Bvcw0KDQojY2xhc3NlIHByw6lkaXRlDQpjbGFzc19wcmVkX3BvbGFyaXRlIDwtIGlmZWxzZShwcmVkX3BvbGFyaXRlID49IDAuNjUsInBvc2l0aXZlIiwibmVnYXRpdmUiKQ0KcHJpbnQodGFibGUoY2xhc3NfcHJlZF9wb2xhcml0ZSkpDQpgYGANCg0KDQpgYGB7cn0NCnAyIDwtIHAyICU+JSBtdXRhdGUocG9sYWludGVyPWlmZWxzZShmcmVxX3Bvcz49IDAuNjAsInBvc2l0aXZlIiwibmVnYXRpdmUiKSkNCmBgYA0KDQoNCmBgYHtyfQ0KcDIgPC0gcDIgJT4lIG11dGF0ZShwb2xhX2ZpbmFsPWlmZWxzZSghaXMubmEocG9sYWludGVyKSxwb2xhaW50ZXIsIm5ldXRyZSIpKQ0KYGBgDQoNCmBgYHtyfQ0KZCA8LSByb3VuZChwcm9wLnRhYmxlKHRhYmxlKHAyJHBvbGFfZmluYWwpKSoxMDAsMikgJT4lIGFzLmRhdGEuZnJhbWUoKQ0KYGNvbG5hbWVzPC1gKGQsYygic2VudGltZW50IiwicHJvcCIpKQ0KY29sbmFtZXMoZCkgPC0gYygic2VudGltZW50IiwicHJvcCIpDQpgYGANCg0KYGBge3J9DQpnZ3Bsb3QoZCxhZXMoc2VudGltZW50LCBwcm9wKSkgKw0KICBnZW9tX2JhcihzdGF0PSJpZGVudGl0eSIpICsNCiAgbGFicyh4ID0gInNlbnRpbWVudCIsDQogICAgICAgeSA9IE5VTEwpDQpgYGANCg0KYGBge3J9DQpnZ3Bsb3QoZGF0YT1kLCBhZXMoeD1zZW50aW1lbnQsIHk9cHJvcCkpICsNCiAgZ2VvbV9iYXIoc3RhdD0iaWRlbnRpdHkiLCBmaWxsPSJzdGVlbGJsdWUiKSsNCiAgZ2VvbV90ZXh0KGFlcyhsYWJlbD1wcm9wKSwgdmp1c3Q9LTAuMywgc2l6ZT0zLjUpKw0KICB0aGVtZV9taW5pbWFsKCkNCg0KZ2dzYXZlKCJyZXN1bHRhdC5wbmciKQ0KYGBgDQoNCg0KDQpDb25mcm9udGF0aW9uIGF2ZWMgbGVzIGNsYXNzZXMgb2JzZXJ2w6llcy4NCg0KYGBge3J9DQojbWF0cmljZSBkZSBjb25mdXNpb24NCm1jIDwtdGFibGUoZGYkc2VudGltZW50LGNsYXNzX3ByZWRfcG9sYXJpdGUpIA0KcHJpbnQobWMpDQpgYGANCg0KYGBge3J9DQojYWNjdXJhY3kNCnByaW50KHN1bShkaWFnKG1jKSkvc3VtKG1jKSkNCmBgYA0KDQoNCg0K</div>
 
 
 
@@ -336,7 +780,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("Pipeline_fouille_opinion_et_analyse_sentimentR.Rmd");
+  window.initializeSourceEmbed("Pipeline_analyse_sentimentR.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>
